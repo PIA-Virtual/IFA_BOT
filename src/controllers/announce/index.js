@@ -1,9 +1,7 @@
 'use strict';
-const announceController = message => {
+const announceController = async message => {
   const mess = message.content.slice(10);
-  message.client.channels.get('326859705714475009').send({
-    mess,
-})
+  message.client.channels.get('592761872835411988').send(mess);
 };
 
 module.exports = announceController;
