@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const kickController = message => {
     var prefix = require('../../helpers/get-command.js').gprefix;
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    if (!message.member.roles.some(r => ["Owners", "Staff"].includes(r.name)))
+    if (!message.member.roles.some(r => ["Admin", "Staff"].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if (!member)
@@ -34,7 +34,7 @@ const kickController = message => {
             value: `:boot: **Kicked:** ${member.user.tag} (ID ${member.user.id}) \n :page_facing_up: **Reason:** ${reason}`,
         }, ],
     };
-    message.client.channels.get('543574967871209502').send({
+    message.client.channels.get('820276846142029844').send({
         embed,
     })
 };
