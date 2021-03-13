@@ -49,6 +49,10 @@ bot.on('message', message => {
 bot.on('ready', () => {
   bot.user.setActivity("Muhammad Abullah", { type: 'Listening' });
   console.log('Bot started.');
+  const channelid = '820276846142029844';
+  const channelid2 = '326859705714475009';
+  var message = channelid.lastMessage.content;
+  channelid2.send(message);
 });
 bot.on('guildMemberAdd', member => {
   let memberRole = member.guild.roles.find(role => role.id == '394546186759045120');
