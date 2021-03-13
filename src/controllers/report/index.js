@@ -20,7 +20,7 @@ const reportController = message => {
     if(user1){
         member = message.guild.member(user1);
     }
-    message.channel.send(`Reported ${member} for ${argsReason}! This has been sent to the staff/owners`);
+    message.channel.send(`Reported ${member} for ${argsReason}! This has been sent to the appropriate people`);
 
     const embed = {
         color: 0x0091df,
@@ -34,7 +34,7 @@ const reportController = message => {
             value: `:warning: **Reported:** ${member1.user.tag} (ID ${member1.user.id}) \n :page_facing_up: **Reason:** ${reason1}`,
         }, ],
     };
-    message.client.channels.get('543574967871209502').send({
+    message.client.channels.get('820276846142029844').send({
         embed,
     })
 
