@@ -53,7 +53,7 @@ bot.on('message', message => {
   }
 });
 bot.on('ready', () => {
-  bot.user.setActivity("Muhammad Abullah", { type: 'Listening' });
+  bot.user.setActivity("Karachi Control", { type: 'Listening' });
   console.log('Bot started.');
 });
 bot.on('guildMemberAdd', member => {
