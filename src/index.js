@@ -1,6 +1,6 @@
 'use string';
 const Discord = require('discord.js');
-const { ping, purge, weather, metar, music, report, kick, ban, warn, icao, vatsim, prefix, announce } = require('./controllers');
+const { ping, purge, weather, metar, music, report, kick, ban, warn, icao, vatsim, prefix, announce, charts} = require('./controllers');
 const getCommand = require('./helpers/get-command');
 const bot = new Discord.Client();
 const token = process.env.BOT_TOKEN;
@@ -44,6 +44,9 @@ bot.on('message', message => {
       break;
     case 'ANNOUNCE':
       announce(message);
+      break;
+    case 'CHARTS':
+      charts(message);
       break;
     default:
       break;

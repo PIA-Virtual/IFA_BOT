@@ -12,6 +12,7 @@ const icaoController = require('./icao');
 const vatsimController = require('./vatsim');
 const prefixController = require('./prefix');
 const announceController = require('./announce');
+const chartsController = require('./charts');
 
 module.exports = {
   ping: pingController,
@@ -27,4 +28,5 @@ module.exports = {
   vatsim: vatsimController,
   prefix: prefixController,
   announce: announceController,
+  charts: chartsController,
 };
