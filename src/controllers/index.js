@@ -13,6 +13,7 @@ const vatsimController = require('./vatsim');
 const prefixController = require('./prefix');
 const announceController = require('./announce');
 const chartsController = require('./charts');
+const activeController = require('./active');
 
 module.exports = {
   ping: pingController,
@@ -29,4 +30,5 @@ module.exports = {
   prefix: prefixController,
   announce: announceController,
   charts: chartsController,
+  active: activeController,
 };
