@@ -14,8 +14,20 @@ const activeController = async message => {
       info
     } = data;
 
+  let numRunways = info.runways.length;
+  let runways = info.runways.map(returnRunways);
+  let arrayRun = [];
+  function returnRunways(length){
+    var i;
+    for (i = 1; i < info.runways.length; i++) { 
+      arrayRun.push(`${info.runways[i].ident1}`);
+      arrayRun.push(`${info.runways[i].ident2}`)
+      return arrayRun;
+}
+  }
+
     message.channel.startTyping(true);
-    message.channel.send(`${info.icao.toUpperCase()} : ${info.runways[0].ident1}, ${info.runways[0].ident2}, ${info.runways[1].ident1}, ${info.runways[1].ident2}`);
+    message.channel.send(arrayRun.toString());
     message.channel.stopTyping(true);
 
   } catch (error) {
